@@ -7,13 +7,18 @@ export const AddCategory = () => {
         setInputValue(e.target.value)
     }
 
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log('no hay submit')
+    }
+
     return (
-        <>
+        <form onSubmit={handleSubmit}>
          <input
             type="text"
             value={inputValue}
             onChange={ handleInputChange }
           />
-        </>
+        </form>
     )
 }
