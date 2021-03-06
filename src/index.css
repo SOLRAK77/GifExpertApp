@@ -9,3 +9,29 @@ input {
   font-size: 1.2rem;
   width: 100%;
 }
+
+.card--grid{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.card{
+  align-content: center;
+  border: 1px solid red;
+  border-radius: 6px;
+  overflow: hidden;
+  margin: 10px 10px;  
+}
+
+.card p {
+  padding: 5px;
+  text-align: center;
+}
+
+.card img{
+  min-height: 170px;
+  min-width: 170px;
+  max-height: 300px;
+  max-width: 300px;
+}
