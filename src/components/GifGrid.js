@@ -8,7 +8,7 @@ export const GifGrid = ({category}) => {
 
     //const [contador, setContador] = useState(0);
     //const [images, setImages] = useState([])
-    const {data, loading} = useFetchGifs(category);
+    const {data:images, loading} = useFetchGifs(category);
     //console.log(data)
     /*
     useEffect(() => {
@@ -27,19 +27,20 @@ export const GifGrid = ({category}) => {
 
     return (
         <>
-            <h3>{category}</h3>            
-            {loading?'Cargando...':
+            <h3 className="animate__animated animate__fadeInLeft">{category}</h3>            
+            { loading && <p className="animate__animated animate__flash animate__fast animate__infinite">Loading...</p> }
+
             <div className="card--grid">        
                     {
-                        data.map( (img,i) => {
-                            return (<GifGridItem 
+                        images.map( (img,i) => {
+                            return (<GifGridItem                                 
                                 key={img.id}
                                 {...img} />
                             )
                         })
                     }
             </div>
-            }
+            
         </>
     )
 }

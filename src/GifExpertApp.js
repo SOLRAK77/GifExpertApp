@@ -19,9 +19,9 @@ export default function GifExpertApp() {
             <hr/>
             <ul>
              {                 
-                categories.map((category,i) => (
+                categories.map((category) => (
                     <GifGrid 
-                        key={category+i}
+                        key={category}
                         category={category} 
                     />
                 ))
